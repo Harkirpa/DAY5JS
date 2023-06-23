@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        .head{
+            text-align: center;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">Day 5</h1>
+    <h2>1.Digital Clock</h2>
+    <h2></h2>
+    <pre>let display=document.querySelectorAll('h2');
+        display[0].addEventListener('click',()=>
+        {
+          function startclock(){
+            let time=new Date();
+        
+            let hrs=time.getHours();
+            let mins=time.getMinutes();
+            let secs=time.getSeconds();
+            let AMPM="AM";
+            
+            if(hrs>12){
+                hrs-=12;
+                AMPM="PM"
+            }
+            console.log(`time:${hrs}:${mins}:${secs}`);
+           
+            display[1].innerHTML=`${hrs}:${mins}:${secs}   ${AMPM}`
+          } 
+            setInterval(()=>{
+                startclock();
+                
+            },1000)
+           
+        })</pre>
+        <hr>
+        <h3>Hii..</h3>
+        <pre>let heading=document.querySelector('h3');
+            heading.addEventListener('mouseover',()=>
+            {
+                heading.innerText='Hello';
+                
+            })
+            heading.addEventListener('mouseleave',()=>
+            {
+                heading.innerText='Hii';
+                
+            })</pre>
+            <hr>
+            <h1 class="changetext">Hello World</h1>
+            <button  onclick="trans()">Click </button>
+            <hr>
+            <h2 class="change">Hello</h2>
+ 
+   
+      <hr>
+    <script src="./script.js"></script>
+</body>
+</html>
